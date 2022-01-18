@@ -51,3 +51,7 @@ Additionally, you will need to change the following functions:
 3. `send_cmd` - change to your desired SPI peripheral, some mcus come with more than one.
 4. `write_data` - change to your desired SPI peripheral, some mcus come with more than one.
 5. `setup_libopencm3` - change to configure the necessary GPIO, SPI, and clocks for your microcontroller
+
+Some microcontrollers, like the bluepill, come with automatic slave select
+management. If your microcontroller doesn't, then you will need to implement
+the slave select functions yourself.
