@@ -7,6 +7,9 @@ alongside `libopencm3`. This repository assumes the device being used is the
 bluepill. The bluepill is a small dev board based on the `stm32f103c8t6`
 microcontroller that also comes with an additional LED on `PC13`.
 
+The example code communicates to the `SSD1306` over 4-wire SPI. The wiring used
+in this example is explained in detail in the `SSD1306`'s datasheet (8.1.3).
+
 # Instructions
 
 ```bash
