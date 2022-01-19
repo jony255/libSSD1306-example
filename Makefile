@@ -65,3 +65,5 @@ gdb: elf
 include $(OPENCM3_DIR)/mk/genlink-config.mk
 include rules.mk
 include $(OPENCM3_DIR)/mk/genlink-rules.mk
+
+.PHONY: default gdb
