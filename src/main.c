@@ -7,7 +7,6 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/spi.h>
 
-#include <limits.h>
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -133,9 +132,6 @@ setup_libopencm3(void)
 static void
 delay(unsigned int delay)
 {
-    if (delay == UINT_MAX) {
-    }
-
     for (volatile unsigned int i = 0; i < delay; i++) {
         /* The nop might be unnecessary since i is volatile. */
         __asm__("nop");
