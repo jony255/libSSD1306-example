@@ -142,10 +142,10 @@ enum ssd1306_err
 send_cmd(struct ssd1306_ctx *ctx, uint8_t cmd)
 {
     spi_enable(SPI1);
+
     mark_as_cmd();
 
-    delay(50);
-    spi_write(SPI1, (uint8_t)cmd);
+    spi_send(SPI1, (uint8_t)cmd);
 
     spi_clean_disable(SPI1);
 
@@ -159,8 +159,7 @@ write_data(struct ssd1306_ctx *ctx, uint8_t data)
 
     mark_as_data();
 
-    delay(50);
-    spi_write(SPI1, data);
+    spi_send(SPI1, data);
 
     spi_clean_disable(SPI1);
 
