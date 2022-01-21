@@ -32,13 +32,14 @@ This is most useful when statically linking the library into your project and
 you tell the linker to garbage collect unused sections. This will throw out
 unused sections (i.e. functions) from your binary.
 
-### bluepill.ini (target machine)
+### bluepill.ini (host machine)
 
-This files defines all of the bluepill specific compiler/`meson` flags of the project
-and uses the flag defined in `embedded-common-flags.ini`. Additionally, it defines
-the target machine's environment. `libSSD1306` doesn't make use of this information
-but getting in the habit of defining this section can prove to be beneficial in some
-of your future projects which incorporate `meson`.
+This file defines all of the bluepill specific compiler/`meson` flags of the
+project and uses the flag defined in `embedded-common-flags.ini`. Additionally,
+it defines the host machine's environment (i.e. the bluepill). `libSSD1306`
+doesn't make use of this information but getting in the habit of defining this
+section can prove to be beneficial in some of your future projects which
+incorporate `meson`.
 
 ## Using a different toolchain
 
