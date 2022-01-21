@@ -58,3 +58,7 @@ Additionally, you will need to change the following functions:
 Some microcontrollers, like the bluepill, come with automatic slave select
 management. If your microcontroller doesn't, then you will need to implement
 the slave select functions yourself.
+
+## Hello World showcase
+
+![hello world](./libssd1306_hello_world.jpg)
