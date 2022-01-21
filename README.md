@@ -1,6 +1,6 @@
 # libSSD1306-example
 
-# Description
+## Description
 
 This repository is meant to provide a working example that uses `libSSD1306`
 alongside `libopencm3`. This repository assumes the device being used is the
@@ -10,7 +10,7 @@ microcontroller that also comes with an additional LED on `PC13`.
 The example code communicates to the `SSD1306` over 4-wire SPI. The wiring used
 in this example is explained in detail in the `SSD1306`'s datasheet (8.1.3).
 
-# Instructions
+## Instructions
 
 ```bash
 git clone --recurse-submodules https://github.com/maybe-one-day-ubermensch/libSSD1306-example.git your-project
@@ -19,11 +19,11 @@ make build-libs # builds libSSD1306 and libopencm3
 make # builds the example program for the bluepill (stm32f103c8t6)
 ```
 
-# Using this example project with another mcu
+## Using this example project with another mcu
 
 In order to port this to another mcu, you need to change a couple of things.
 
-## `make` variables to change
+### `make` variables to change
 
 1. `DEVICE` - used by `libopencm3` to generate the linker script and defines the macros
            needed to compile your application with `libopencm3`.
@@ -34,7 +34,7 @@ In order to port this to another mcu, you need to change a couple of things.
 
 4. `OOCD_TARGET` - target `openocd` will flash the program to
 
-## Areas of source code to change
+### Areas of source code to change
 
 Some of the source code is specific to the bluepill. For example, any code that
 configures/uses the additional LED is wrapped around a preprocessor conditional
