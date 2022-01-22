@@ -15,9 +15,15 @@ in this example is explained in detail in the `SSD1306`'s datasheet (8.1.3).
 ```bash
 git clone --recurse-submodules https://github.com/maybe-one-day-ubermensch/libSSD1306-example.git your-project
 cd your-project
-make build-libs # builds libSSD1306 and libopencm3
+make build-libs # perform cross builds of libSSD1306 and libopencm3
 make # builds the example program for the bluepill (stm32f103c8t6)
 ```
+
+## Cross building libSSD1306
+
+The files relevant to the cross build of `libSSD1306` are in `machine-files/`.
+Refer to `machine-files/README.md` for more information on the cross build of
+`libSSD1306`.
 
 ## Using this example project with another mcu
 
