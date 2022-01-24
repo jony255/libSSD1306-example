@@ -116,8 +116,8 @@ setup_libopencm3(void)
     spi_enable_ss_output(SPI1);
 
     /*
-     * Therefore, configure the stm32f1 to only transmit and leave the unused
-     * MISO pin free for use as D/C.
+     * Configure the stm32f1 to only transmit and leave the unused MISO pin free
+     * for use as D/C.
      */
     spi_set_full_duplex_mode(SPI1);
     spi_set_unidirectional_mode(SPI1);
